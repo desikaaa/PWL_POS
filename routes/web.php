@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PosController;
 use App\Http\Controllers\SalesController;
+use App\Http\Controllers\LevelController;
 
 
 /*
@@ -23,7 +24,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Halaman Home
+Route::get('/level', [LevelController::class, 'index']);
+
+// Halaman Home projek sebelumnya
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Halaman Products (prefix: /category)
