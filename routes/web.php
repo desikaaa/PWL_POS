@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PosController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\LevelController;
+use App\Http\Controllers\KategoriController;
 
 
 /*
@@ -25,6 +26,8 @@ Route::get('/', function () {
 });
 
 Route::get('/level', [LevelController::class, 'index']);
+Route::get('/kategori', [KategoriController::class, 'index']);
+
 
 // Halaman Home projek sebelumnya
 Route::get('/', [HomeController::class, 'index'])->name('home');
